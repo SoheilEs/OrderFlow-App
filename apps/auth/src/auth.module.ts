@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+<<<<<<< HEAD
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { RmqModule, DatabaseModule } from '@app/common';
@@ -37,3 +38,14 @@ import { JwtStrategy } from './strategies/jwt.strategies';
   providers: [AuthService, LocalStrategy, JwtStrategy],
 })
 export class AuthModule {}
+=======
+import { AuthController } from './auth.controller';
+import { AuthService } from './auth.service';
+
+@Module({
+  imports: [],
+  controllers: [AuthController],
+  providers: [AuthService],
+})
+export class AuthModule {}
+>>>>>>> 0b49a8b2b4a79bd62909cb80b09cc98b4572a511

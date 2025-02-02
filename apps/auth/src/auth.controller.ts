@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Controller, Post, Res, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { Response } from 'express';
@@ -27,3 +28,17 @@ export class AuthController {
     return user;
   }
 }
+=======
+import { Controller, Get } from '@nestjs/common';
+import { AuthService } from './auth.service';
+
+@Controller()
+export class AuthController {
+  constructor(private readonly authService: AuthService) {}
+
+  @Get()
+  getHello(): string {
+    return this.authService.getHello();
+  }
+}
+>>>>>>> 0b49a8b2b4a79bd62909cb80b09cc98b4572a511

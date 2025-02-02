@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+<<<<<<< HEAD
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
@@ -40,3 +41,12 @@ export class AuthService {
     });
   }
 }
+=======
+
+@Injectable()
+export class AuthService {
+  getHello(): string {
+    return 'Hello World!';
+  }
+}
+>>>>>>> 0b49a8b2b4a79bd62909cb80b09cc98b4572a511
